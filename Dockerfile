@@ -11,6 +11,6 @@ RUN apt-get install -y nodejs
 RUN npm i -g npm
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-ENV PATH="/home/dragon/bin:$PATH"
+ENV PATH="/home/drago/bin:$PATH"
 
-CMD ["python3","-m","dragon"]
+CMD ["python3","-m","drago"]
