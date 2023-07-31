@@ -13,7 +13,7 @@ _get_ziplink () {
         then
             echo "${UPSTREAM_REPO}/archive/${UPSTREAM_REPO_BRANCH}.zip"
         else
-            echo "${UPSTREAM_REPO}/archive/dragon.zip"
+            echo "${UPSTREAM_REPO}/archive/drago.zip"
         fi
     else
         echo "aHR0cHM6Ly9naXRodWIuY29tL3FpdGhvbmlxL2RyYWdvL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
@@ -45,7 +45,7 @@ _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
 OFFICIAL_UPSTREAM_REPO = "https://github.com/qithoniq/drago"
-ACTIVE_BRANCH_NAME = "dragon"
+ACTIVE_BRANCH_NAME = "master"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
 origin.fetch()
@@ -68,7 +68,7 @@ repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 
 _set_bot () {
     local zippath
-    zippath="dragon.zip"
+    zippath="drago.zip"
     echo "جاري تنزيل اكواد السورس "
     wget -q $(_get_ziplink) -O "$zippath"
     echo " تفريغ البيانات "
@@ -87,7 +87,7 @@ _set_bot () {
     echo "
 
     "
-    python3 -m dragon
+    python3 -m drago
 }
 
 _set_bot
