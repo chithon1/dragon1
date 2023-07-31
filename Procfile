@@ -1,1 +1,1 @@
-worker: bash dragon
+worker: bash drago
