@@ -1,7 +1,7 @@
 FROM qithoniq/drago:slim-buster
 
 #clonning repo 
-RUN git clone https://github.com/qithoniq/drago.git /root/drago
+RUN git clone https://github.com/qithoniq/drago11.git /root/drago
 #working directory 
 WORKDIR /root/drago
 
